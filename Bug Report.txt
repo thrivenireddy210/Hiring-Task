@@ -1,0 +1,38 @@
+                         Bug Report:
+
+Title/Summary:
+Job details form submission doesn't proceed to the next step i,e. Interview Settings  despite no errors on the screen.
+
+Description:
+After filling out the job details form and clicking the "Next" button, the form submission does not proceed to the next step, even when there are no visible errors on the screen. The expected behavior is that the form should move to the next step after successful submission.
+
+Environment/Platform:
+- Operating System: All os's
+- Browser: all Browsers
+
+Screenshots/Recordings:
+https://youtu.be/9QOpPEBF9B8 
+
+Steps to Reproduce:
+1. Open the application Fill out the Requestion Details and click on NEXT button to move Job Details Form .
+2. Fill out all the required fields correctly.
+3. Click the "Next" button to submit the form. 
+
+
+
+
+Expected Behavior:
+After successful submission of the job details form, the form should proceed to the next step.
+
+Actual Behavior:
+The form does not proceed to the next step despite no visible errors on the screen.
+
+Impact/Severity:
+This issue prevents the user from progressing to the next step in the hiring process, disrupting the workflow and potentially causing frustration for the user. The impact is moderate as it affects the usability of the application.
+
+Additional Information:
+- The issue occurs consistently and can be reproduced every time.
+
+Solution:
+The bug was caused by a validation rule for the jobPosition field in the validationSchema. After commenting out the validation rule, the form submission proceeded to the next step successfully. It seems that the validation rule was mistakenly preventing the form from advancing, even though there were no visible errors on the screen.
+
